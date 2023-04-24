@@ -4,3 +4,7 @@
 
 
 + cada app tiene sus models y se deben importar en sus views
+
+git add .
+git commit -m ''
+git push origin m
