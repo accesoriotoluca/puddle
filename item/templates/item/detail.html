@@ -1,7 +1,32 @@
 {% extends 'core/base.html' %}
 {% block title %} {{item.name}} {% endblock %}
 {% block content %}
+<!--
+* La clase "grid":
+ define contenedor qc dividirá en filas y columnas, y los elementos dentro dl contenedor c colocarán en esas filas y columnas las especificaciones
+?estilos grid-cols-5, gap-6 pertenecen a propiedad grid de CSS, c utiliza para crear diseños de cuadrícula
+ *La clase "grid-cols-5":
+ especifica que el contenedor se dividirá en 5 columnas
+ *clase "gap-6":
+ establece un espacio de 6 píxeles entre cada una de las filas y columnas de la cuadrícula
+ -->
 <div class="grid grid-cols-5 gap-6">
+<!--
+* La clase "col-span-3":
+? pertenece a la propiedad "grid" de CSS
+especificar el número de columnas que un elemento ocupará en una cuadrícula
+"col-span-3": elemento ocupará 3 columnas en cuadrícula y dejará 2 columnas a su derecha libres
+orden de izq-der, arriba-abajo
+*"grid-template-rows" y "grid-template-columns":
+propiedades de CSS q permite especificar #d filas y columnas en cuadrícula, así como su tamaño y orden
+Si c cambia dirección d cuadrícula, orden en qc colocan los elementos también cambiará
+? cuadrícula d 3 filas-columnas, cada fila alto 100px, cada columna ancho 100px
+.grid-container {
+  display: grid;
+  grid-template-rows: 100px 100px 100px;
+  grid-template-columns: 100px 100px 100px;
+}
+-->
     <div class="col-span-3">
         <img src="{{item.image.url}}" alt="" class="rounded-xl">
     </div>
