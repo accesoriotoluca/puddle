@@ -21,10 +21,19 @@ orden de izq-der, arriba-abajo
 propiedades de CSS q permite especificar #d filas y columnas en cuadrícula, así como su tamaño y orden
 Si c cambia dirección d cuadrícula, orden en qc colocan los elementos también cambiará
 ? cuadrícula d 3 filas-columnas, cada fila alto 100px, cada columna ancho 100px
+
+<div class="grid-container">
+  <div class="item"></div>
+</div>
+
 .grid-container {
   display: grid;
   grid-template-rows: 100px 100px 100px;
   grid-template-columns: 100px 100px 100px;
+}
+.item {
+  grid-row: 2;
+  grid-column: 2;
 }
 -->
     <div class="col-span-3">
