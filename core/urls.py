@@ -10,5 +10,9 @@ urlpatterns = [
     path('',index,name='index'),
     path('contact/', contact, name='contact'), 
     path('singup/', singup, name='singup'), 
-    path('login/', auth_views.LoginView.as_view(template_name='core/login.html',authentication_form=loginForm), name='login'),
+    path('login/', auth_views.LoginView.as_view(
+        template_name='core/login.html',
+        authentication_form=loginForm),
+        name='login'
+    ),
 ]
